@@ -1,0 +1,36 @@
+.new-tweet textarea {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  border-bottom: 0.2em solid #ffffff;
+  margin-bottom: 0.5em;
+  height: 1.5em;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.new-tweet {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.counter {
+  font-family: "Bungee", sans-serif;
+}
+
+button {
+  font-family: "Bungee", sans-serif;
+  background-color: #00adb5;
+  color: white;
+}

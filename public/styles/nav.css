@@ -5,6 +5,7 @@ nav {
   background-color: #00adb5;
   color: #ffffff;
   position: fixed;
+  margin-bottom: 1em;
 }
 
 .container-logo {
@@ -29,4 +30,5 @@ nav {
 
 i {
   color: #ffffff;
+  margin-bottom: 1.5em;
 }
