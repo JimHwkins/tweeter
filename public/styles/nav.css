@@ -2,8 +2,9 @@ nav {
   display: flex;
   height: 120px;
   width: 100%;
-  background-color: #4056a1;
+  background-color: #00adb5;
   color: #ffffff;
+  position: fixed;
 }
 
 .container-logo {
@@ -27,5 +28,5 @@ nav {
 }
 
 i {
-  color: red;
+  color: #ffffff;
 }
