@@ -1,5 +1,5 @@
 "use strict";
-
+/* eslint-disable */
 // Require fs to write to initial-tweets.json
 const fs = require("fs");
 // Requiring a JSON file automatically parses it and returns the data.

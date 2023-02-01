@@ -34,3 +34,7 @@ button {
   background-color: #00adb5;
   color: white;
 }
+
+.char-limit {
+  color: red;
+}
