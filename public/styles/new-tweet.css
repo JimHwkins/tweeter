@@ -7,11 +7,13 @@
   height: 1.5em;
   color: #ffffff;
   font-weight: bold;
+  padding: 20px;
 }
 
 .new-tweet {
   font-weight: bold;
   color: #ffffff;
+  padding: 20px;
 }
 
 label {
