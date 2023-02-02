@@ -11,6 +11,8 @@ article.tweet-container:hover {
   background-color: #222831;
   transition: all 0.2s;
   box-shadow: 13px 13px 13px -2px #222831;
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 .user {

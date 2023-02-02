@@ -4,7 +4,7 @@
  * Do not modify these two selectors, please
  */
 html {
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 *,
 *:before,
@@ -30,9 +30,9 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-.container {
-  width: 90%;
-  align-self: center;
+#tweets-container {
+  width: 80%;
   background-color: inherit;
   padding: 1em;
+  margin: auto;
 }

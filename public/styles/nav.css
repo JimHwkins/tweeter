@@ -6,6 +6,7 @@ nav {
   color: #ffffff;
   position: fixed;
   margin-bottom: 1em;
+  z-index: 1;
 }
 
 .container-logo {
