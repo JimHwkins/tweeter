@@ -36,13 +36,19 @@ $(document).ready(() => {
   };
 
   const renderTweets = (tweets) => {
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
     for (const tweet of tweets) {
       const newTweet = createTweetElement(tweet);
       $("#tweets-container").append(newTweet);
     }
+  };
+
+  const loadTweets = () => {
+    $.ajax({
+      method: "GET",
+      url: "/tweets",
+    }).then((data) => {
+      renderTweets(data);
+    });
   };
 
   const $form = $("#tweet-form");
@@ -55,4 +61,5 @@ $(document).ready(() => {
       data: serializedData,
     }).then(serializedData);
   });
+  loadTweets();
 });
