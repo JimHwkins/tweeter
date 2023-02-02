@@ -4,6 +4,12 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(() => {
+  const escape = (str) => {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = (tweet) => {
     const $tweet = $(`
   <article class="tweet-container">
@@ -18,7 +24,7 @@ $(document).ready(() => {
   </div>
   <div class="content">
     <p>
-    ${tweet.content.text}
+    ${escape(tweet.content.text)}
     </p>
   </div>
   <div class="line"></div>
