@@ -54,12 +54,20 @@ $(document).ready(() => {
   const $form = $("#tweet-form");
   $form.on("submit", (event) => {
     event.preventDefault();
+    const tweetText = $("#tweet-text").val();
+    if (tweetText.length > 140) {
+      return alert("The tweet is limited to 140 characters only");
+    }
+    if (tweetText === "" || tweetText === null) {
+      return alert("The tweet can't be empty");
+    }
     const serializedData = $form.serialize();
     $.ajax({
       method: "POST",
       url: "/tweets",
       data: serializedData,
     }).then(serializedData);
+    loadTweets();
   });
   loadTweets();
 });
