@@ -15,6 +15,10 @@ article.tweet-container:hover {
   transform: scale(1.01);
 }
 
+article.tweet-container:not(:hover) {
+  transition: all 0.3s;
+}
+
 .user {
   display: flex;
   flex-direction: row;
@@ -71,6 +75,10 @@ footer.tweet {
   color: #00adb5;
 }
 .icon-container i:hover {
-  color: #ff9d4e;
-  transition: 0.3s;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.5);
+}
+
+.icon-container i:not(:hover) {
+  transition: all 0.3s;
 }

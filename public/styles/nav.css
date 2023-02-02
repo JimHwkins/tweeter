@@ -9,6 +9,15 @@ nav {
   z-index: 1;
 }
 
+nav:hover {
+  transition: all 0.3s;
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+}
+nav:not(:hover) {
+  transition: all 0.3s;
+}
+
 .container-logo {
   width: 100%;
   height: 100%;
