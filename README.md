@@ -2,14 +2,25 @@
 
 Tweeter is a simple, single-page Twitter clone. Developed to test and improve my HTML, CSS, JS, jQuery and AJAX skills.
 
-# GIF
+# Preview
 
 !["Preview of functionality"]()
 
-# Screenshots
+## Screenshots
 
-!["Screenshot of desktop app"]()
-!["Screenshot of mobile app"]()
+### Desktop
+
+!["Screenshot of desktop app"](https://github.com/JimHwkins/tweeter/blob/master/docs/Tweeter-desktop-feed.png)
+!["Screenshot of desktop app"](https://github.com/JimHwkins/tweeter/blob/master/docs/Tweeter-desktop-post.png)
+
+### Responsive
+
+!["Screenshot of responsive app"](https://github.com/JimHwkins/tweeter/blob/master/docs/Tweeter-responsive-feed.png)
+!["Screenshot of responsive app"](https://github.com/JimHwkins/tweeter/blob/master/docs/Tweeter-responsive-post.jpeg)
+
+### Error
+
+!["Screenshot of responsive app"](https://github.com/JimHwkins/tweeter/blob/master/docs/Tweeter-responsive-error.png)
 
 ## Getting Started
 
