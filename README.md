@@ -10,8 +10,8 @@ Tweeter is a simple, single-page Twitter clone. Developed to test and improve my
 
 ### Desktop
 
-!["Screenshot of desktop app"](https://github.com/JimHwkins/tweeter/blob/master/docs/Tweeter-desktop-feed.png)
 !["Screenshot of desktop app"](https://github.com/JimHwkins/tweeter/blob/master/docs/Tweeter-desktop-post.png)
+!["Screenshot of desktop app"](https://github.com/JimHwkins/tweeter/blob/master/docs/Tweeter-desktop-feed.png)
 
 ### Responsive
 
