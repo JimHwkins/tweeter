@@ -1,8 +1,5 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+/* eslint-disable */
+
 $(document).ready(() => {
   // Function to prevent XSS
   const escape = (str) => {
@@ -10,6 +7,18 @@ $(document).ready(() => {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
+
+  // Function to toggle new tweet form
+  const $newTweetButton = $("#toggle-new-tweet");
+  $newTweetButton.on("click", function () {
+    const $form = $("main").children(".new-tweet").children("form");
+    if ($form.first().is(":hidden")) {
+      $form.slideDown("slow");
+      $("#tweet-text").focus();
+    } else {
+      $form.slideUp("slow");
+    }
+  });
 
   // Function to render tweet with html
   const createTweetElement = (tweet) => {
@@ -43,9 +52,9 @@ $(document).ready(() => {
     return $tweet;
   };
 
-  // Function to retrieve tweet from tweets
+  // Function to retrieve tweet from tweets db
   const renderTweets = (tweets) => {
-    // Empties the tweets feed before rendering
+    // Empties the feed before rendering
     $(".tweets-feed-container").empty();
     for (const tweet of tweets) {
       const newTweet = createTweetElement(tweet);
@@ -71,19 +80,21 @@ $(document).ready(() => {
     event.preventDefault();
     const tweetText = $("#tweet-text").val();
     $(".error-message").hide();
-    // Initial conditionals for tweet posting
-    if (tweetText.length > 10) {
+
+    // Conditionals and error messages
+    if (tweetText.length > 140) {
       const $error = $("<div>")
-        .text("Your message is limited to 140 characters only")
+        .text("Your message is limited to 140 characters only.")
         .addClass("error-message");
       $("#tweet-form").prepend($error);
       return;
     }
     if (!tweetText) {
       const $error = $("<div>")
-        .text("The tweet cannot be empty")
+        .text("The message cannot be empty.")
         .addClass("error-message");
       $("#tweet-form").prepend($error);
+      $error.slideDown("slow");
       return;
     }
 
@@ -96,6 +107,7 @@ $(document).ready(() => {
       .then(loadTweets())
       .then(serializedData);
     loadTweets();
+
     // Restarts textarea and character counter
     $("#tweet-text").val("");
     $(".counter").text(140);

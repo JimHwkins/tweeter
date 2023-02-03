@@ -1,5 +1,7 @@
 /* eslint-disable */
+
 $(document).ready(function () {
+  // Function to count characters
   $("textarea").on("input", function () {
     const maxChars = 140;
     const inputChars = $(this).val().length;

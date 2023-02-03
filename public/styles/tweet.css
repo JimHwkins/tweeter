@@ -3,20 +3,8 @@ article.tweet-container {
   padding: 20px;
   display: flex;
   flex-flow: column;
-  border: 4px solid #ffffff;
+  border: 0.15em solid #ffffff;
   align-self: center;
-}
-
-article.tweet-container:hover {
-  background-color: #222831;
-  transition: all 0.2s;
-  box-shadow: 13px 13px 13px -2px #222831;
-  -webkit-transform: scale(1.01);
-  transform: scale(1.01);
-}
-
-article.tweet-container:not(:hover) {
-  transition: all 0.3s;
 }
 
 .user {
@@ -74,11 +62,35 @@ footer.tweet {
   margin-left: 10px;
   color: #00adb5;
 }
+
+/* Hover effects */
+article.tweet-container:hover {
+  filter: invert(1);
+  cursor: pointer;
+  background-color: #222831;
+  transition: all 0.2s;
+  box-shadow: 13px 13px 13px -2px #000000;
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+}
+
+article.tweet-container:not(:hover) {
+  transition: all 0.3s;
+}
+
 .icon-container i:hover {
+  cursor: pointer;
   transition: all 0.2s ease-in-out;
   transform: scale(1.5);
 }
 
 .icon-container i:not(:hover) {
   transition: all 0.3s;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  article {
+    margin-top: 20em;
+  }
 }

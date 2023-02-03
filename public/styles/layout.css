@@ -12,27 +12,37 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
+  min-width: 10em;
   color: #ffffff;
-  background-color: #393e46;
-  font-size: 24px;
+  background-color: #222831;
+  font-size: 1.5rem;
   font-family: "Source Sans Pro", sans-serif;
+  margin: auto;
+  vertical-align: middle;
 }
 
 #logo {
   font-family: "Bungee";
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 #tweets-container {
-  width: 80%;
+  width: 80vw;
   background-color: inherit;
   padding: 1em;
   margin: auto;
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+
+  .profile {
+    width: 33.3%;
+    margin: 1em 1em 1em 1em;
+    padding-top: 1em;
+    display: block;
+  }
 }

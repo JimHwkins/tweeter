@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -49,39 +53,40 @@
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
+    <!-- Top nav bar -->
     <nav>
       <div class="container-logo">
         <span class="logo">tweeter</span>
         <div class="nav-content">
           <span><strong>Write</strong> a new tweet</span>
-          <i class="fas fa-angle-double-down"></i>
+          <button
+            id="toggle-new-tweet"
+            class="fas fa-angle-double-down"
+          ></button>
         </div>
       </div>
     </nav>
-    <header>
-      <div class="container-image">
-        <img src="/images/profile-hex.png" />
-      </div>
-      <br />
-      <div>
-        <h2><strong>Amy</strong> Mansell</h2>
+    <!-- User profile -->
+    <header class="profile">
+      <div class="profile-container">
+        <img id="user-picture" src="/images/profile-hex.png" />
+        <h2 class="user-name"><strong>Amy</strong> Mansell</h2>
       </div>
     </header>
 
-    <!-- Page-specific (main) content here -->
+    <!-- Tweet form -->
     <main class="container" id="tweets-container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets/" id="tweet-form">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div>
-            <button type="submit">Tweet</button>
+            <button id="new-tweet-button" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
+      <!-- Feed -->
       <section class="tweets-feed-container"></section>
     </main>
   </body>

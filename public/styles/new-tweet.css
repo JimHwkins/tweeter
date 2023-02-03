@@ -10,19 +10,6 @@
   padding: 10px;
 }
 
-.new-tweet textarea:focus {
-  background-color: #222831;
-  transition: all 0.3s;
-  box-shadow: 13px 13px 13px -2px #222831;
-  -webkit-transform: scale(1.01);
-  transform: scale(1.01);
-  border: 2px solid #ffffff;
-}
-
-.new-tweet textarea:not(:focus) {
-  transition: all 0.3s;
-}
-
 .new-tweet {
   font-weight: bold;
   color: #ffffff;
@@ -44,17 +31,11 @@ div {
   font-family: "Bungee", sans-serif;
 }
 
-button {
+#new-tweet-button {
   font-family: "Bungee", sans-serif;
-  background-color: #00adb5;
+  background-color: #222831;
   color: white;
-}
-
-button:hover {
-  transition: all 0.2s;
-  box-shadow: 13px 13px 13px -2px #222831;
-  -webkit-transform: scale(1.01);
-  transform: scale(1.03);
+  border: 0ch;
 }
 
 .char-limit {
@@ -70,4 +51,50 @@ button:hover {
   color: #d8000c;
   background-color: inherit;
   background-image: url("https://i.imgur.com/GnyDvKN.png");
+}
+
+/* Focus and Hover effects */
+.new-tweet textarea:focus {
+  background-color: #222831;
+  transition: all 0.3s;
+  box-shadow: 13px 13px 13px -2px #000000;
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+  border: 2px solid #ffffff;
+  filter: invert(1);
+}
+
+.new-tweet textarea:not(:focus) {
+  transition: all 0.3s;
+}
+
+.new-tweet textarea:hover {
+  filter: invert();
+  cursor: pointer;
+  background-color: #222831;
+  transition: all 0.3s;
+  box-shadow: 13px 13px 13px -2px #000000;
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+  border: 2px solid #ffffff;
+}
+
+.new-tweet textarea:not(:hover) {
+  transition: all 0.3s;
+}
+
+#new-tweet-button:hover {
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 13px 13px 13px -2px #ffffff;
+  -webkit-transform: scale(1.01);
+  transform: scale(1.03);
+  border: 0.2px solid #ffffff;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    padding-top: 20vh;
+  }
 }

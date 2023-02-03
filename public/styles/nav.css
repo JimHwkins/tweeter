@@ -1,21 +1,14 @@
 nav {
   display: flex;
-  height: 120px;
+  height: 5em;
   width: 100%;
-  background-color: #00adb5;
+  background-color: #222831;
   color: #ffffff;
   position: fixed;
-  margin-bottom: 1em;
+  margin: 0;
   z-index: 1;
-}
-
-nav:hover {
-  transition: all 0.3s;
-  -webkit-transform: scale(1.01);
-  transform: scale(1.01);
-}
-nav:not(:hover) {
-  transition: all 0.3s;
+  outline: solid 0.5vh #ffffff;
+  outline-offset: -0.5vh;
 }
 
 .container-logo {
@@ -32,13 +25,68 @@ nav:not(:hover) {
   font-size: 1.5em;
 }
 
+#toggle-new-tweet {
+  -webkit-text-fill-color: #00adb5;
+  margin-bottom: 2.5em;
+  background-color: transparent;
+  border: 0ch;
+  animation: bounce 1.5s infinite;
+}
+
 .nav-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+/* Hover effects */
+nav:hover {
+  filter: invert();
+  transition: all 0.3s;
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+  box-shadow: 13px 13px 13px -5px #000000;
+  border: 0.5px ridge #080000;
+}
+nav:not(:hover) {
+  transition: all 0.3s;
+}
 
-i {
-  color: #ffffff;
-  margin-bottom: 2.5em;
+.logo:hover {
+  cursor: pointer;
+  transition: all 0.2s;
+  animation: bounce 1s 1;
+}
+
+#toggle-new-tweet:hover {
+  cursor: pointer;
+  transition: all 0.2s;
+  transform: scale(2);
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  nav {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .logo {
+    padding-left: 6vh;
+  }
+}
+
+/* Animation */
+@keyframes bounce {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(5px);
+  }
+  60% {
+    transform: translateY(2px);
+  }
 }
