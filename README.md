@@ -4,7 +4,7 @@ Tweeter is a simple, single-page Twitter clone. Developed to test and improve my
 
 # Preview
 
-!["Preview of functionality"]()
+!["Preview of functionality"](<https://github.com/JimHwkins/tweeter/blob/master/docs/Tweeter-functionality%20(1).gif>)
 
 ## Screenshots
 
@@ -15,8 +15,8 @@ Tweeter is a simple, single-page Twitter clone. Developed to test and improve my
 
 ### Responsive
 
-!["Screenshot of responsive app"](https://github.com/JimHwkins/tweeter/blob/master/docs/Tweeter-responsive-feed.png)
 !["Screenshot of responsive app"](https://github.com/JimHwkins/tweeter/blob/master/docs/Tweeter-responsive-post.jpeg)
+!["Screenshot of responsive app"](https://github.com/JimHwkins/tweeter/blob/master/docs/Tweeter-responsive-feed.png)
 
 ### Error
 
